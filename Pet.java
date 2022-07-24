@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Pet {
     String species;
@@ -56,14 +57,15 @@ public class Pet {
         System.out.println("I need to cover it up");
     }
 
+    Scanner sc = new Scanner(System.in);
     @Override
     public String toString() {
+        this.setTrickLevel(sc.nextInt());
         return this.species +"{" +
                 "nickname='" + this.nickname +
-                ", age=" + this.age +
+                "', age=" + this.age +
                 ", trickLevel=" + this.getTrickLevel() +
                 ", habits=[" + Arrays.toString(this.habits) +
                 "]}";
     }
 }
-//Arrays.toString(new String[]{"eat", "drink", "sleep"})
