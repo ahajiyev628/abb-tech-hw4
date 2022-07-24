@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Human {
     String name;
     String surname;
@@ -62,10 +64,10 @@ public class Human {
         }
     }
 
+    Scanner sc = new Scanner(System.in);
     Pet p = new Pet("dog", "Rock", 5,  new String[]{"eat", "drink", "sleep"});
 
     public void describePet() {
-        p.setTrickLevel(75);
         System.out.println("I have a " + p.species + ", he is " + p.age + " years old, he is " + Human.tLevel(p.getTrickLevel()));
     }
 
@@ -77,12 +79,12 @@ public class Human {
     public String toString() {
         return "Human{" +
                 "name='" + this.name +
-                ", surname='" + this.surname +
-                ", year=" + this.year +
+                "', surname='" + this.surname +
+                "', year=" + this.year +
                 ", iq=" + this.getIq() +
-                ", mother=" + this.mother.name + " " + this.mother.surname +
-                ", father=" + this.father.name + " " + this.father.surname +
-                ", pet=" + p.toString() +
+                ", mother='" + this.mother.name + " " + this.mother.surname +
+                "'', father='" + this.father.name + " " + this.father.surname +
+                "', pet=" + p.toString() +
                 '}';
     }
 }
